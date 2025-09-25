@@ -1,15 +1,217 @@
-<h1>Cadastro</h1>
-<form action="#" method="post">
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" required><br><br>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Mundo dos Ratos</title>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <h1>Mundo dos Ratos</h1>
+        <p>Descubra tudo sobre esses fascinantes roedores</p>
+    </header>
 
-    <label for="email">E-mail:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+    <!-- Menu de navegação -->
+    <nav>
+        <h2>Menu de Navegação</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="especies.html">Espécies</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="formulario.html">Formulário</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-    <label for="mensagem">Mensagem:</label><br>
-    <textarea id="mensagem" name="mensagem" rows="4" cols="40" required></textarea><br><br>
+    <!-- Conteúdo principal -->
+    <main>
+        <section id="formulario">
+            <h2>Formulário de Interesse sobre Ratos</h2>
+            <p>Preencha este formulário para receber mais informações, participar de pesquisas ou compartilhar suas experiências com ratos.</p>
+            
+            <form action="#" method="post">
+                <!-- Seção de Informações Pessoais -->
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    
+                    <div>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                    
+                    <div>
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="10" max="100">
+                    </div>
+                    
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                    
+                    <div>
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado">
+                            <option value="">Selecione...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </fieldset>
 
-    <input type="submit" value="Enviar">
-</form>
-<br>
-<a href="index.html">Voltar</a>
+                <!-- Seção de Interesse em Ratos -->
+                <fieldset>
+                    <legend>Seu Interesse em Ratos</legend>
+                    
+                    <div>
+                        <p>Qual seu nível de interesse em ratos?</p>
+                        <input type="radio" id="interesse-baixo" name="interesse" value="baixo">
+                        <label for="interesse-baixo">Baixo</label>
+                        
+                        <input type="radio" id="interesse-medio" name="interesse" value="medio">
+                        <label for="interesse-medio">Médio</label>
+                        
+                        <input type="radio" id="interesse-alto" name="interesse" value="alto">
+                        <label for="interesse-alto">Alto</label>
+                        
+                        <input type="radio" id="interesse-muito-alto" name="interesse" value="muito-alto">
+                        <label for="interesse-muito-alto">Muito Alto</label>
+                    </div>
+                    
+                    <div>
+                        <p>Que tipo de informação sobre ratos mais lhe interessa? (Selecione todas as opções aplicáveis)</p>
+                        <input type="checkbox" id="info-comportamento" name="info-interesse" value="comportamento">
+                        <label for="info-comportamento">Comportamento</label><br>
+                        
+                        <input type="checkbox" id="info-especies" name="info-interesse" value="especies">
+                        <label for="info-especies">Espécies</label><br>
+                        
+                        <input type="checkbox" id="info-cuidados" name="info-interesse" value="cuidados">
+                        <label for="info-cuidados">Cuidados como animal de estimação</label><br>
+                        
+                        <input type="checkbox" id="info-pesquisa" name="info-interesse" value="pesquisa">
+                        <label for="info-pesquisa">Pesquisa científica</label><br>
+                        
+                        <input type="checkbox" id="info-controle" name="info-interesse" value="controle">
+                        <label for="info-controle">Controle de pragas</label><br>
+                        
+                        <input type="checkbox" id="info-conservacao" name="info-interesse" value="conservacao">
+                        <label for="info-conservacao">Conservação</label>
+                    </div>
+                    
+                    <div>
+                        <label for="experiencia">Você já teve alguma experiência com ratos? Conte-nos:</label><br>
+                        <textarea id="experiencia" name="experiencia" rows="4" placeholder="Descreva suas experiências com ratos, sejam como animais de estimação, em pesquisa ou encontros na natureza..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Seção de Participação -->
+                <fieldset>
+                    <legend>Participação e Contato</legend>
+                    
+                    <div>
+                        <label for="como-conheceu">Como você conheceu o nosso site?</label>
+                        <select id="como-conheceu" name="como-conheceu">
+                            <option value="">Selecione...</option>
+                            <option value="busca">Busca na internet</option>
+                            <option value="rede-social">Rede social</option>
+                            <option value="indicacao">Indicação de amigo</option>
+                            <option value="evento">Evento ou palestra</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <p>Gostaria de receber nossa newsletter?</p>
+                        <input type="radio" id="newsletter-sim" name="newsletter" value="sim">
+                        <label for="newsletter-sim">Sim</label>
+                        
+                        <input type="radio" id="newsletter-nao" name="newsletter" value="nao">
+                        <label for="newsletter-nao">Não</label>
+                    </div>
+                    
+                    <div>
+                        <p>Como prefere ser contactado?</p>
+                        <input type="checkbox" id="contato-email" name="contato" value="email">
+                        <label for="contato-email">E-mail</label>
+                        
+                        <input type="checkbox" id="contato-telefone" name="contato" value="telefone">
+                        <label for="contato-telefone">Telefone</label>
+                        
+                        <input type="checkbox" id="contato-whatsapp" name="contato" value="whatsapp">
+                        <label for="contato-whatsapp">WhatsApp</label>
+                    </div>
+                    
+                    <div>
+                        <label for="mensagem">Mensagem adicional ou perguntas:</label><br>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui qualquer mensagem adicional, pergunta ou comentário..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Botões de envio -->
+                <div>
+                    <button type="submit">Enviar Formulário</button>
+                    <button type="reset">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+        
+        <!-- Informações adicionais -->
+        <section id="info-adicional">
+            <h3>O que faremos com suas informações?</h3>
+            <p>Suas informações serão utilizadas exclusivamente para:</p>
+            <ul>
+                <li>Envio de conteúdo personalizado sobre ratos conforme seu interesse</li>
+                <li>Convite para participação em pesquisas e estudos (opcional)</li>
+                <li>Estatísticas internas para melhorar nosso conteúdo</li>
+                <li>Contato apenas se você autorizar</li>
+            </ul>
+            <p>Não compartilhamos suas informações com terceiros. Para mais detalhes, consulte nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 Mundo dos Ratos. Todos os direitos reservados.</p>
+        <p><a href="sobre.html">Sobre nós</a> | <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a></p>
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </footer>
+    <a href="index.html">Voltar</a>
+</body>
+</html>

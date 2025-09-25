@@ -1,50 +1,210 @@
-<h1>Produtos</h1>
-<table border="1">
-    <tr>
-        <th>Produto</th>
-        <th>Imagem</th>
-        <th>Detalhes</th>
-    </tr>
-    <tr>
-        <td>Produto 1</td>
-        <td>
-            <a href="produto2.html">
-                <img src="https://via.placeholder.com/100x100?text=Produto+1" alt="Produto 1">
-            </a>
-        </td>
-        <td><a href="produto2.html">Ver detalhes</a></td>
-    </tr>
-    <tr>
-        <td>Produto 2</td>
-        <td>
-            <a href="produto3.html">
-                <img src="https://via.placeholder.com/100x100?text=Produto+2" alt="Produto 2">
-            </a>
-        </td>
-        <td><a href="produto3.html">Ver detalhes</a></td>
-    </tr>
-    <tr>
-        <td>Produto 3</td>
-        <td>
-            <a href="produto4.html">
-                <img src="https://via.placeholder.com/100x100?text=Produto+3" alt="Produto 3">
-            </a>
-        </td>
-        <td><a href="produto4.html">Ver detalhes</a></td>
-    </tr>
-    <tr>
-        <td>Produto 4</td>
-        <td>
-            <a href="produto5.html">
-                <img src="https://via.placeholder.com/100x100?text=Produto+4" alt="Produto 4">
-            </a>
-        </td>
-        <td><a href="produto5.html">Ver detalhes</a></td>
-    </tr>
-</table>
-<br>
-<ul>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Mundo dos Ratos</title>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <h1>Mundo dos Ratos</h1>
+        <p>Descubra tudo sobre esses fascinantes roedores</p>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <h2>Menu de Navegação</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="especies.html">Espécies</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="formulario.html">Formulário</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section id="produtos">
+            <h2>Nossos Produtos para Amantes de Ratos</h2>
+            <p>Encontre aqui uma seleção especial de produtos relacionados a ratos, desde itens para cuidados até presentes temáticos.</p>
+            
+            <!-- Tabela de produtos -->
+            <table border="1">
+                <caption>Catálogo de Produtos</caption>
+                <thead>
+                    <tr>
+                        <th>Imagem</th>
+                        <th>Nome do Produto</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Produto 1 -->
+                    <tr>
+                        <td>
+                            <a href="produto-gaiola.html">
+                                <img src="https://via.placeholder.com/150x150?text=Gaiola+Ratos" alt="Gaiola para Ratos" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-gaiola.html">Gaiola Espacial para Ratos</a></td>
+                        <td>Habitação</td>
+                        <td>R$ 189,90</td>
+                        <td>Gaiola ampla com vários níveis, bebedouro e comedouro inclusos</td>
+                    </tr>
+                    
+                    <!-- Produto 2 -->
+                    <tr>
+                        <td>
+                            <a href="produto-racao.html">
+                                <img src="https://via.placeholder.com/150x150?text=Ração+Premium" alt="Ração para Ratos" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-racao.html">Ração Premium para Ratos</a></td>
+                        <td>Alimentação</td>
+                        <td>R$ 34,90</td>
+                        <td>Alimento balanceado com todos os nutrientes essenciais</td>
+                    </tr>
+                    
+                    <!-- Produto 3 -->
+                    <tr>
+                        <td>
+                            <a href="produto-brinquedo.html">
+                                <img src="https://via.placeholder.com/150x150?text=Brinquedo" alt="Brinquedo para Ratos" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-brinquedo.html">Kit Brinquedos Interativos</a></td>
+                        <td>Enriquecimento</td>
+                        <td>R$ 45,50</td>
+                        <td>Conjunto com roda, labirinto e brinquedos de madeira</td>
+                    </tr>
+                    
+                    <!-- Produto 4 -->
+                    <tr>
+                        <td>
+                            <a href="produto-livro.html">
+                                <img src="https://via.placeholder.com/150x150?text=Livro" alt="Livro sobre Ratos" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-livro.html">Guia Completo do Criador de Ratos</a></td>
+                        <td>Educação</td>
+                        <td>R$ 67,80</td>
+                        <td>Livro com 200 páginas sobre cuidados, saúde e comportamento</td>
+                    </tr>
+                    
+                    <!-- Produto 5 -->
+                    <tr>
+                        <td>
+                            <a href="produto-caminha.html">
+                                <img src="https://via.placeholder.com/150x150?text=Caminha" alt="Caminha para Ratos" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-caminha.html">Caminha Aconchegante</a></td>
+                        <td>Conforto</td>
+                        <td>R$ 28,90</td>
+                        <td>Caminha macia e quentinha para seu rato descansar</td>
+                    </tr>
+                    
+                    <!-- Produto 6 -->
+                    <tr>
+                        <td>
+                            <a href="produto-transporte.html">
+                                <img src="https://via.placeholder.com/150x150?text=Caixa+Transporte" alt="Caixa de Transporte" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-transporte.html">Caixa de Transporte Segura</a></td>
+                        <td>Transporte</td>
+                        <td>R$ 52,00</td>
+                        <td>Caixa ventilada e segura para levar seu rato ao veterinário</td>
+                    </tr>
+                    
+                    <!-- Produto 7 -->
+                    <tr>
+                        <td>
+                            <a href="produto-camiseta.html">
+                                <img src="https://via.placeholder.com/150x150?text=Camiseta" alt="Camiseta de Rato" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-camiseta.html">Camiseta "Eu Amo Ratos"</a></td>
+                        <td>Vestuário</td>
+                        <td>R$ 39,90</td>
+                        <td>Camiseta 100% algodão com estampa de rato fofinho</td>
+                    </tr>
+                    
+                    <!-- Produto 8 -->
+                    <tr>
+                        <td>
+                            <a href="produto-caneca.html">
+                                <img src="https://via.placeholder.com/150x150?text=Caneca" alt="Caneca de Rato" width="150">
+                            </a>
+                        </td>
+                        <td><a href="produto-caneca.html">Caneca Temática de Ratos</a></td>
+                        <td>Presentes</td>
+                        <td>R$ 24,90</td>
+                        <td>Caneca de porcelana com desenhos de diferentes espécies</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Frete grátis para compras acima de R$ 150,00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <!-- Filtros de categoria -->
+            <section id="filtros">
+                <h3>Filtrar por Categoria</h3>
+                <ul>
+                    <li><a href="#habitação">Habitação</a></li>
+                    <li><a href="#alimentação">Alimentação</a></li>
+                    <li><a href="#enriquecimento">Enriquecimento</a></li>
+                    <li><a href="#educação">Educação</a></li>
+                    <li><a href="#conforto">Conforto</a></li>
+                    <li><a href="#transporte">Transporte</a></li>
+                    <li><a href="#vestuário">Vestuário</a></li>
+                    <li><a href="#presentes">Presentes</a></li>
+                </ul>
+            </section>
+            
+            <!-- Informações de compra -->
+            <section id="info-compra">
+                <h3>Como Comprar</h3>
+                <ol>
+                    <li>Clique na imagem ou nome do produto para ver detalhes</li>
+                    <li>Na página do produto, clique em "Adicionar ao Carrinho"</li>
+                    <li>Continue comprando ou finalize seu pedido</li>
+                    <li>Escolha a forma de pagamento e envio</li>
+                    <li>Aguarde a confirmação e prepare-se para receber seu produto!</li>
+                </ol>
+                
+                <h4>Formas de Pagamento</h4>
+                <ul>
+                    <li>Cartão de crédito (até 3x sem juros)</li>
+                    <li>Cartão de débito</li>
+                    <li>Boleto bancário</li>
+                    <li>PIX (5% de desconto)</li>
+                </ul>
+                
+                <h4>Política de Entrega</h4>
+                <p>Entregamos para todo o Brasil. O prazo de entrega varia de 5 a 15 dias úteis, dependendo da localidade.</p>
+            </section>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 Mundo dos Ratos. Todos os direitos reservados.</p>
+        <p><a href="sobre.html">Sobre nós</a> | <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a></p>
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </footer>
+    <ul>
     <li>
         <a href="index.html">Voltar para o index</a>
     </li>
 </ul>
+</body>
+</html>
