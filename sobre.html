@@ -4,6 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Mundo dos Ratos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #1a252f;
+            border-radius: 4px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+        h3, h4 {
+            color: #34495e;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .media-item {
+            flex: 1 1 300px;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .media-item h4 {
+            margin-top: 0;
+        }
+        audio {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabeçalho do site -->
@@ -14,7 +115,6 @@
 
     <!-- Menu de navegação -->
     <nav>
-        <h2>Menu de Navegação</h2>
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="especies.html">Espécies</a></li>
@@ -27,12 +127,27 @@
     <main>
         <section id="sobre">
             <h2>Sobre o Mundo dos Ratos</h2>
-            <img src="https://via.placeholder.com/800x300?text=Conheça+nosso+site" alt="Sobre o site Mundo dos Ratos">
+            <img src="https://via.placeholder.com/1200x400?text=Conheça+nosso+site" alt="Sobre o site Mundo dos Ratos">
             
             <article>
                 <h3>Nossa História</h3>
                 <p>O site Mundo dos Ratos foi criado em 2023 com o objetivo de desmistificar e educar sobre esses fascinantes roedores. Percebemos que existe muito preconceito e desinformação sobre os ratos, e nosso propósito é mudar essa percepção através de conteúdo científico e educativo.</p>
                 <p>Nossa equipe é formada por biólogos, veterinários e entusiastas da natureza que dedicam seu tempo para pesquisar e compartilhar informações precisas sobre a vida, comportamento e importância ecológica dos ratos.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Som de ratos se comunicando</h4>
+                        <audio controls>
+                            <source src="https://www.soundjay.com/button/button-3.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p>Os ratos emitem sons ultrassônicos para comunicação que são inaudíveis para humanos.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Imagem: Rato em seu habitat natural</h4>
+                        <img src="https://via.placeholder.com/400x300?text=Rato+no+habitat+natural" alt="Rato em seu habitat natural">
+                    </div>
+                </div>
             </article>
 
             <article>
@@ -40,6 +155,22 @@
                 <p>Nossa missão é promover o conhecimento científico sobre os ratos, combatendo estereótipos negativos e destacando a importância desses animais nos ecossistemas e na pesquisa científica.</p>
                 <p>Buscamos ser a principal fonte de informação confiável sobre ratos em língua portuguesa, oferecendo conteúdo acessível para estudantes, pesquisadores e o público em geral interessado em aprender mais sobre esses incríveis mamíferos.</p>
                 <p>Acreditamos que o conhecimento é a chave para a conservação e o respeito por todas as formas de vida, independentemente de sua popularidade ou aparência.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Rato de laboratório</h4>
+                        <img src="https://via.placeholder.com/400x300?text=Rato+de+laboratório" alt="Rato de laboratório">
+                        <p>Ratos são fundamentais para pesquisas médicas e científicas.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Som de rato se alimentando</h4>
+                        <audio controls>
+                            <source src="https://www.soundjay.com/button/button-4.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p>Ratos são onívoros e têm uma dieta variada na natureza.</p>
+                    </div>
+                </div>
             </article>
 
             <article>
@@ -47,6 +178,22 @@
                 <p>Visamos tornar-nos referência internacional em educação sobre roedores, expandindo nosso conteúdo para abranger todas as espécies de ratos e seus habitats em diferentes partes do mundo.</p>
                 <p>Pretendemos desenvolver parcerias com instituições de pesquisa e conservação para apoiar estudos científicos e programas de preservação de espécies de ratos ameaçadas de extinção.</p>
                 <p>Nosso objetivo futuro inclui a criação de um centro virtual de recursos educativos que possa ser utilizado por escolas e universidades em seus programas de ensino sobre biodiversidade e ecologia.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Rato-canguru ameaçado</h4>
+                        <img src="https://via.placeholder.com/400x300?text=Rato-canguru+ameaçado" alt="Rato-canguru, espécie ameaçada">
+                        <p>Muitas espécies de ratos estão ameaçadas de extinção.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Vídeo educativo sobre ratos</h4>
+                        <video width="100%" controls poster="https://via.placeholder.com/400x300?text=Video+sobre+ratos">
+                            <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <p>Vídeo educativo sobre a importância dos ratos no ecossistema.</p>
+                    </div>
+                </div>
             </article>
 
             <article>
@@ -66,23 +213,49 @@
                 
                 <h4>Ética e Transparência</h4>
                 <p>Mantemos transparência sobre nossas fontes de informação e metodologias, assegurando que nosso trabalho seja realizado com integridade e ética.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Rato em pesquisa comportamental</h4>
+                        <img src="https://via.placeholder.com/400x300?text=Rato+em+pesquisa+comportamental" alt="Rato em pesquisa comportamental">
+                    </div>
+                    <div class="media-item">
+                        <h4>Som de rato explorando ambiente</h4>
+                        <audio controls>
+                            <source src="https://www.soundjay.com/button/button-5.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p>Ratos são animais curiosos que exploram ativamente seus ambientes.</p>
+                    </div>
+                </div>
             </article>
 
             <article>
                 <h3>Nossa Equipe</h3>
                 <p>Contamos com uma equipe multidisciplinar dedicada à pesquisa e divulgação científica sobre roedores:</p>
                 
-                <h4>Dr. Rodrigo Silva - Biólogo</h4>
-                <p>Especialista em ecologia de roedores com mais de 15 anos de experiência em pesquisa de campo. Doutor em Zoologia pela Universidade de São Paulo.</p>
-                
-                <h4>Dra. Mariana Costa - Veterinária</h4>
-                <p>Veterinária especializada em animais silvestres e exóticos, com foco em saúde e bem-estar de roedores. Mestre em Medicina Veterinária pela UFMG.</p>
-                
-                <h4>Prof. Carlos Mendes - Educador Ambiental</h4>
-                <p>Responsável pela adaptação do conteúdo científico para linguagem acessível. Desenvolve materiais educativos para escolas e programas de educação ambiental.</p>
-                
-                <h4>Ana Lúcia Pereira - Pesquisadora</h4>
-                <p>Bacharel em Ciências Biológicas com especialização em comportamento animal. Coordena nossas pesquisas sobre interações sociais em colônias de ratos.</p>
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Dr. Rodrigo Silva - Biólogo</h4>
+                        <img src="https://via.placeholder.com/200x200?text=Dr.+Rodrigo+Silva" alt="Dr. Rodrigo Silva, biólogo">
+                        <p>Especialista em ecologia de roedores com mais de 15 anos de experiência em pesquisa de campo. Doutor em Zoologia pela Universidade de São Paulo.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Dra. Mariana Costa - Veterinária</h4>
+                        <img src="https://via.placeholder.com/200x200?text=Dra.+Mariana+Costa" alt="Dra. Mariana Costa, veterinária">
+                        <p>Veterinária especializada em animais silvestres e exóticos, com foco em saúde e bem-estar de roedores. Mestre em Medicina Veterinária pela UFMG.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Prof. Carlos Mendes - Educador Ambiental</h4>
+                        <img src="https://via.placeholder.com/200x200?text=Prof.+Carlos+Mendes" alt="Prof. Carlos Mendes, educador ambiental">
+                        <p>Responsável pela adaptação do conteúdo científico para linguagem acessível. Desenvolve materiais educativos para escolas e programas de educação ambiental.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Ana Lúcia Pereira - Pesquisadora</h4>
+                        <img src="https://via.placeholder.com/200x200?text=Ana+Lúcia+Pereira" alt="Ana Lúcia Pereira, pesquisadora">
+                        <p>Bacharel em Ciências Biológicas com especialização em comportamento animal. Coordena nossas pesquisas sobre interações sociais em colônias de ratos.</p>
+                    </div>
+                </div>
             </article>
 
             <article>
@@ -95,6 +268,17 @@
                     <li>Participação em programas de conservação de espécies ameaçadas</li>
                     <li>Reconhecimento como fonte confiável por instituições científicas</li>
                 </ul>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Material educativo</h4>
+                        <img src="https://via.placeholder.com/400x300?text=Material+educativo+sobre+ratos" alt="Material educativo sobre ratos">
+                    </div>
+                    <div class="media-item">
+                        <h4>Rato em exposição educacional</h4>
+                        <img src="https://via.placeholder.com/400x300?text=Exposição+educacional" alt="Exposição educacional sobre ratos">
+                    </div>
+                </div>
             </article>
         </section>
     </main>
@@ -107,10 +291,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-<ul><li><a href="index.html">Voltar para index</a></li>
-    </ul>

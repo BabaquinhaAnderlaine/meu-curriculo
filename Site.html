@@ -3,7 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo dos Ratos - Tudo sobre esses fascinantes roedores</title>
+    <title>Sobre - Mundo dos Ratos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2c3e50, #4a6491);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #1a252f;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h4 {
+            color: #4a6491;
+            margin: 1.2rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .media-item {
+            flex: 1 1 300px;
+            background-color: #f8f9fa;
+            padding: 1.2rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        
+        .media-item h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        audio, video {
+            width: 100%;
+            margin: 0.8rem 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.8rem;
+        }
+        
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .team-member {
+            background-color: #f8f9fa;
+            padding: 1.2rem;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.3rem 0;
+            }
+            
+            .media-container {
+                flex-direction: column;
+            }
+            
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Cabeçalho do site -->
@@ -14,145 +219,179 @@
 
     <!-- Menu de navegação -->
     <nav>
-        <h2>Menu de Navegação</h2>
         <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#especies">Espécies</a></li>
-            <li><a href="#habitat">Habitat</a></li>
-            <li><a href="#alimentacao">Alimentação</a></li>
-            <li><a href="#curiosidades">Curiosidades</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="especies.html">Espécies</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
 
     <!-- Conteúdo principal -->
     <main>
-        <!-- Seção Início -->
-        <section id="inicio">
-            <h2>Bem-vindo ao Mundo dos Ratos</h2>
-            <img src="https://via.placeholder.com/800x400?text=Rato+Doméstico" alt="Rato doméstico">
-            <p>Os ratos são mamíferos roedores da família Muridae. Existem diversas espécies de ratos, sendo as mais conhecidas o rato-doméstico (Mus musculus) e a ratazana (Rattus norvegicus).</p>
-            <p>Estes animais possuem uma incrível capacidade de adaptação e são encontrados em praticamente todos os habitats do planeta, exceto na Antártida.</p>
-            <p>Neste site, você descobrirá informações fascinantes sobre a vida, comportamento e características desses animais muitas vezes incompreendidos.</p>
-        </section>
-
-        <!-- Seção Espécies -->
-        <section id="especies">
-            <h2>Principais Espécies de Ratos</h2>
+        <section id="sobre">
+            <h2>Sobre o Mundo dos Ratos</h2>
+            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=400&q=80" alt="Rato em ambiente natural">
             
             <article>
-                <h3>Rato-doméstico (Mus musculus)</h3>
-                <img src="https://via.placeholder.com/300x200?text=Rato+Doméstico" alt="Rato doméstico">
-                <p>O rato-doméstico é uma das espécies mais comuns. Possui cerca de 7-10 cm de comprimento (corpo) e uma cauda de tamanho similar. São animais sociais que vivem em grupos hierárquicos.</p>
-                <p>Saiba mais sobre o <a href="https://pt.wikipedia.org/wiki/Rato-dom%C3%A9stico" target="_blank">rato-doméstico na Wikipedia</a>.</p>
+                <h3>Nossa História</h3>
+                <p>O site Mundo dos Ratos foi criado em 2023 com o objetivo de desmistificar e educar sobre esses fascinantes roedores. Percebemos que existe muito preconceito e desinformação sobre os ratos, e nosso propósito é mudar essa percepção através de conteúdo científico e educativo.</p>
+                <p>Nossa equipe é formada por biólogos, veterinários e entusiastas da natureza que dedicam seu tempo para pesquisar e compartilhar informações precisas sobre a vida, comportamento e importância ecológica dos ratos.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Comunicação entre ratos</h4>
+                        <audio controls>
+                            <source src="https://www.soundjay.com/button/button-3.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p>Os ratos emitem sons ultrassônicos para comunicação que são inaudíveis para humanos.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Rato em seu habitat natural</h4>
+                        <img src="https://images.unsplash.com/photo-1548685913-4b2c4b1dff99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato em seu habitat natural">
+                    </div>
+                </div>
             </article>
-            
+
             <article>
-                <h3>Ratazana (Rattus norvegicus)</h3>
-                <img src="https://via.placeholder.com/300x200?text=Ratazana" alt="Ratazana">
-                <p>Também conhecida como rato-de-esgoto, a ratazana é maior que o rato-doméstico, podendo atingir até 25 cm de comprimento (corpo). São excelentes nadadoras e constroem tocas complexas.</p>
-                <p>Saiba mais sobre a <a href="https://pt.wikipedia.org/wiki/Ratazana" target="_blank">ratazana na Wikipedia</a>.</p>
+                <h3>Nossa Missão</h3>
+                <p>Nossa missão é promover o conhecimento científico sobre os ratos, combatendo estereótipos negativos e destacando a importância desses animais nos ecossistemas e na pesquisa científica.</p>
+                <p>Buscamos ser a principal fonte de informação confiável sobre ratos em língua portuguesa, oferecendo conteúdo acessível para estudantes, pesquisadores e o público em geral interessado em aprender mais sobre esses incríveis mamíferos.</p>
+                <p>Acreditamos que o conhecimento é a chave para a conservação e o respeito por todas as formas de vida, independentemente de sua popularidade ou aparência.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Rato de laboratório</h4>
+                        <img src="https://images.unsplash.com/photo-1584555130003-bb313e8e6c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato de laboratório">
+                        <p>Ratos são fundamentais para pesquisas médicas e científicas.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Som de rato se alimentando</h4>
+                        <audio controls>
+                            <source src="https://www.soundjay.com/button/button-4.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p>Ratos são onívoros e têm uma dieta variada na natureza.</p>
+                    </div>
+                </div>
             </article>
-            
+
             <article>
-                <h3>Rato-preto (Rattus rattus)</h3>
-                <img src="https://via.placeholder.com/300x200?text=Rato+Preto" alt="Rato preto">
-                <p>O rato-preto é mais ágil e possui habilidades de escalada superiores às da ratazana. São frequentemente encontrados em áreas elevadas como sótãos e árvores.</p>
-                <p>Saiba mais sobre o <a href="https://pt.wikipedia.org/wiki/Rato-preto" target="_blank">rato-preto na Wikipedia</a>.</p>
+                <h3>Nossa Visão</h3>
+                <p>Visamos tornar-nos referência internacional em educação sobre roedores, expandindo nosso conteúdo para abranger todas as espécies de ratos e seus habitats em diferentes partes do mundo.</p>
+                <p>Pretendemos desenvolver parcerias com instituições de pesquisa e conservação para apoiar estudos científicos e programas de preservação de espécies de ratos ameaçadas de extinção.</p>
+                <p>Nosso objetivo futuro inclui a criação de um centro virtual de recursos educativos que possa ser utilizado por escolas e universidades em seus programas de ensino sobre biodiversidade e ecologia.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Rato-canguru ameaçado</h4>
+                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato-canguru, espécie ameaçada">
+                        <p>Muitas espécies de ratos estão ameaçadas de extinção.</p>
+                    </div>
+                    <div class="media-item">
+                        <h4>Vídeo educativo sobre ratos</h4>
+                        <video width="100%" controls poster="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80">
+                            <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <p>Vídeo educativo sobre a importância dos ratos no ecossistema.</p>
+                    </div>
+                </div>
             </article>
-        </section>
 
-        <!-- Seção Habitat -->
-        <section id="habitat">
-            <h2>Habitat dos Ratos</h2>
-            <img src="https://via.placeholder.com/600x300?text=Habitat+dos+Ratos" alt="Habitat dos ratos">
-            <p>Os ratos são animais extremamente adaptáveis e podem viver em diversos ambientes:</p>
-            <ul>
-                <li><strong>Ambientes urbanos:</strong> Esgotos, porões, sótãos, armazéns</li>
-                <li><strong>Ambientes rurais:</strong> Campos agrícolas, celeiros, silos</li>
-                <li><strong>Ambientes naturais:</strong> Florestas, pradarias, margens de rios</li>
-            </ul>
-            <p>Sua capacidade de adaptação lhes permite sobreviver em condições extremas, desde que haja acesso a alimento e abrigo.</p>
-        </section>
+            <article>
+                <h3>Nossos Valores</h3>
+                
+                <h4>Precisão Científica</h4>
+                <p>Comprometemo-nos a basear todo nosso conteúdo em pesquisas científicas sólidas e fontes confiáveis, garantindo que as informações compartilhadas sejam precisas e atualizadas.</p>
+                
+                <h4>Respeito pela Vida Animal</h4>
+                <p>Acreditamos no valor intrínseco de todas as espécies e promovemos o respeito e a compaixão pelos ratos e por todos os animais, independentemente de sua função ecológica ou utilidade para os humanos.</p>
+                
+                <h4>Educação Acessível</h4>
+                <p>Defendemos que o conhecimento deve ser livre e acessível a todos. Por isso, disponibilizamos nosso conteúdo gratuitamente e em linguagem clara para diferentes públicos.</p>
+                
+                <h4>Conservação Ambiental</h4>
+                <p>Reconhecemos a importância dos ratos nos ecossistemas e promovemos práticas de conservação que protejam não apenas essas espécies, mas todo o ambiente em que vivem.</p>
+                
+                <h4>Ética e Transparência</h4>
+                <p>Mantemos transparência sobre nossas fontes de informação e metodologias, assegurando que nosso trabalho seja realizado com integridade e ética.</p>
+                
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Rato em pesquisa comportamental</h4>
+                        <img src="https://images.unsplash.com/photo-1584555130003-bb313e8e6c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato em pesquisa comportamental">
+                    </div>
+                    <div class="media-item">
+                        <h4>Som de rato explorando ambiente</h4>
+                        <audio controls>
+                            <source src="https://www.soundjay.com/button/button-5.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p>Ratos são animais curiosos que exploram ativamente seus ambientes.</p>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Seção Alimentação -->
-        <section id="alimentacao">
-            <h2>Alimentação dos Ratos</h2>
-            <img src="https://via.placeholder.com/600x300?text=Alimentação+dos+Ratos" alt="Alimentação dos ratos">
-            <p>Os ratos são animais onívoros, o que significa que se alimentam de uma grande variedade de alimentos:</p>
-            <ul>
-                <li>Grãos e sementes</li>
-                <li>Frutas e vegetais</li>
-                <li>Insetos e pequenos invertebrados</li>
-                <li>Ovos de aves</li>
-                <li>Restos de comida humana</li>
-            </ul>
-            <p>Esta diversidade alimentar é uma das razões para seu sucesso em diferentes habitats.</p>
-        </section>
+            <article>
+                <h3>Nossa Equipe</h3>
+                <p>Contamos com uma equipe multidisciplinar dedicada à pesquisa e divulgação científica sobre roedores:</p>
+                
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Dr. Rodrigo Silva, biólogo">
+                        <h4>Dr. Rodrigo Silva - Biólogo</h4>
+                        <p>Especialista em ecologia de roedores com mais de 15 anos de experiência em pesquisa de campo. Doutor em Zoologia pela Universidade de São Paulo.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Dra. Mariana Costa, veterinária">
+                        <h4>Dra. Mariana Costa - Veterinária</h4>
+                        <p>Veterinária especializada em animais silvestres e exóticos, com foco em saúde e bem-estar de roedores. Mestre em Medicina Veterinária pela UFMG.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Prof. Carlos Mendes, educador ambiental">
+                        <h4>Prof. Carlos Mendes - Educador Ambiental</h4>
+                        <p>Responsável pela adaptação do conteúdo científico para linguagem acessível. Desenvolve materiais educativos para escolas e programas de educação ambiental.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Ana Lúcia Pereira, pesquisadora">
+                        <h4>Ana Lúcia Pereira - Pesquisadora</h4>
+                        <p>Bacharel em Ciências Biológicas com especialização em comportamento animal. Coordena nossas pesquisas sobre interações sociais em colônias de ratos.</p>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Seção Curiosidades -->
-        <section id="curiosidades">
-            <h2>Curiosidades sobre Ratos</h2>
-            <img src="https://via.placeholder.com/600x300?text=Curiosidades+sobre+Ratos" alt="Curiosidades sobre ratos">
-            
-            <h3>Fatos Interessantes:</h3>
-            <ul>
-                <li>Os ratos possuem dentes incisivos que nunca param de crescer</li>
-                <li>Eles são capazes de se reproduzir rapidamente - uma fêmea pode ter até 10 ninhadas por ano</li>
-                <li>Ratos possuem excelente memória e podem aprender caminhos complexos</li>
-                <li>Eles são animais sociais que desenvolvem estruturas hierárquicas em suas colônias</li>
-                <li>Ratos são usados em pesquisas científicas devido à similaridade genética com humanos</li>
-                <li>Eles possuem um olfato apurado, sendo capazes de detectar certas doenças como a tuberculose</li>
-            </ul>
-            
-            <h3>Ratos na Cultura:</h3>
-            <p>Os ratos aparecem frequentemente na cultura popular, desde personagens de desenhos animados como Mickey Mouse e Jerry (de Tom e Jerry) até representações negativas associadas a doenças.</p>
-        </section>
-
-        <!-- Seção Contato -->
-        <section id="contato">
-            <h2>Entre em Contato</h2>
-            <p>Tem perguntas sobre ratos ou quer compartilhar informações? Entre em contato conosco!</p>
-            
-            <form>
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome">
-                </div>
+            <article>
+                <h3>Nossas Conquistas</h3>
+                <p>Desde nossa fundação, já alcançamos importantes marcos:</p>
+                <ul>
+                    <li>Mais de 50 artigos publicados sobre diferentes espécies de ratos</li>
+                    <li>Parcerias com 3 universidades para projetos de pesquisa</li>
+                    <li>Desenvolvimento de material educativo utilizado em 20 escolas</li>
+                    <li>Participação em programas de conservação de espécies ameaçadas</li>
+                    <li>Reconhecimento como fonte confiável por instituições científicas</li>
+                </ul>
                 
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email">
+                <div class="media-container">
+                    <div class="media-item">
+                        <h4>Material educativo</h4>
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Material educativo sobre ratos">
+                    </div>
+                    <div class="media-item">
+                        <h4>Rato em exposição educacional</h4>
+                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Exposição educacional sobre ratos">
+                    </div>
                 </div>
-                
-                <div>
-                    <label for="assunto">Assunto:</label>
-                    <input type="text" id="assunto" name="assunto">
-                </div>
-                
-                <div>
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
-                </div>
-                
-                <div>
-                    <button type="submit">Enviar Mensagem</button>
-                </div>
-            </form>
-            
-            <p>Acesse também:</p>
-            <ul>
-                <li><a href="sobre.html">Descubra sobre nós</a></li>
-                <li><a href="cadastro.html">Cadastre-se</a></li>
-                <li><a href="produto.html">Veja nossos produtos</a></li>
-            </ul>
+            </article>
         </section>
     </main>
 
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2023 Mundo dos Ratos. Todos os direitos reservados.</p>
-        <p><a href="#inicio">Voltar ao topo</a></p>
+        <p><a href="sobre.html">Sobre nós</a> | <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a></p>
+        <p><a href="#topo">Voltar ao topo</a></p>
     </footer>
 </body>
 </html>

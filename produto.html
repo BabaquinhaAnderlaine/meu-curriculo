@@ -4,6 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Mundo dos Ratos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2c3e50, #4a6491);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #1a252f;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h4 {
+            color: #4a6491;
+            margin: 1.2rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        
+        caption {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .product-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .category-btn {
+            background-color: #ecf0f1;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-btn:hover {
+            background-color: #bdc3c7;
+        }
+        
+        .category-btn.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .payment-method {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            flex: 1 1 200px;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.8rem;
+        }
+        
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .video-demo {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+        }
+        
+        .audio-sample {
+            width: 100%;
+            margin: 0.8rem 0;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.3rem 0;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .category-filters {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Cabeçalho do site -->
@@ -14,7 +263,6 @@
 
     <!-- Menu de navegação -->
     <nav>
-        <h2>Menu de Navegação</h2>
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="especies.html">Espécies</a></li>
@@ -31,8 +279,18 @@
             <h2>Nossos Produtos para Amantes de Ratos</h2>
             <p>Encontre aqui uma seleção especial de produtos relacionados a ratos, desde itens para cuidados até presentes temáticos.</p>
             
+            <!-- Áudio de introdução -->
+            <div class="media-item">
+                <h4>Ouça sobre nossos produtos</h4>
+                <audio controls class="audio-sample">
+                    <source src="https://www.soundjay.com/button/button-3.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                <p>Conheça nossa linha de produtos para o bem-estar do seu rato.</p>
+            </div>
+            
             <!-- Tabela de produtos -->
-            <table border="1">
+            <table>
                 <caption>Catálogo de Produtos</caption>
                 <thead>
                     <tr>
@@ -48,12 +306,12 @@
                     <tr>
                         <td>
                             <a href="produto-gaiola.html">
-                                <img src="https://via.placeholder.com/150x150?text=Gaiola+Ratos" alt="Gaiola para Ratos" width="150">
+                                <img src="https://images.unsplash.com/photo-1571781926265-40347da4e2f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Gaiola para Ratos" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-gaiola.html">Gaiola Espacial para Ratos</a></td>
                         <td>Habitação</td>
-                        <td>R$ 189,90</td>
+                        <td class="price">R$ 189,90</td>
                         <td>Gaiola ampla com vários níveis, bebedouro e comedouro inclusos</td>
                     </tr>
                     
@@ -61,12 +319,12 @@
                     <tr>
                         <td>
                             <a href="produto-racao.html">
-                                <img src="https://via.placeholder.com/150x150?text=Ração+Premium" alt="Ração para Ratos" width="150">
+                                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Ração para Ratos" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-racao.html">Ração Premium para Ratos</a></td>
                         <td>Alimentação</td>
-                        <td>R$ 34,90</td>
+                        <td class="price">R$ 34,90</td>
                         <td>Alimento balanceado com todos os nutrientes essenciais</td>
                     </tr>
                     
@@ -74,12 +332,12 @@
                     <tr>
                         <td>
                             <a href="produto-brinquedo.html">
-                                <img src="https://via.placeholder.com/150x150?text=Brinquedo" alt="Brinquedo para Ratos" width="150">
+                                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Brinquedo para Ratos" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-brinquedo.html">Kit Brinquedos Interativos</a></td>
                         <td>Enriquecimento</td>
-                        <td>R$ 45,50</td>
+                        <td class="price">R$ 45,50</td>
                         <td>Conjunto com roda, labirinto e brinquedos de madeira</td>
                     </tr>
                     
@@ -87,12 +345,12 @@
                     <tr>
                         <td>
                             <a href="produto-livro.html">
-                                <img src="https://via.placeholder.com/150x150?text=Livro" alt="Livro sobre Ratos" width="150">
+                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Livro sobre Ratos" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-livro.html">Guia Completo do Criador de Ratos</a></td>
                         <td>Educação</td>
-                        <td>R$ 67,80</td>
+                        <td class="price">R$ 67,80</td>
                         <td>Livro com 200 páginas sobre cuidados, saúde e comportamento</td>
                     </tr>
                     
@@ -100,12 +358,12 @@
                     <tr>
                         <td>
                             <a href="produto-caminha.html">
-                                <img src="https://via.placeholder.com/150x150?text=Caminha" alt="Caminha para Ratos" width="150">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Caminha para Ratos" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-caminha.html">Caminha Aconchegante</a></td>
                         <td>Conforto</td>
-                        <td>R$ 28,90</td>
+                        <td class="price">R$ 28,90</td>
                         <td>Caminha macia e quentinha para seu rato descansar</td>
                     </tr>
                     
@@ -113,12 +371,12 @@
                     <tr>
                         <td>
                             <a href="produto-transporte.html">
-                                <img src="https://via.placeholder.com/150x150?text=Caixa+Transporte" alt="Caixa de Transporte" width="150">
+                                <img src="https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Caixa de Transporte" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-transporte.html">Caixa de Transporte Segura</a></td>
                         <td>Transporte</td>
-                        <td>R$ 52,00</td>
+                        <td class="price">R$ 52,00</td>
                         <td>Caixa ventilada e segura para levar seu rato ao veterinário</td>
                     </tr>
                     
@@ -126,12 +384,12 @@
                     <tr>
                         <td>
                             <a href="produto-camiseta.html">
-                                <img src="https://via.placeholder.com/150x150?text=Camiseta" alt="Camiseta de Rato" width="150">
+                                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Camiseta de Rato" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-camiseta.html">Camiseta "Eu Amo Ratos"</a></td>
                         <td>Vestuário</td>
-                        <td>R$ 39,90</td>
+                        <td class="price">R$ 39,90</td>
                         <td>Camiseta 100% algodão com estampa de rato fofinho</td>
                     </tr>
                     
@@ -139,12 +397,12 @@
                     <tr>
                         <td>
                             <a href="produto-caneca.html">
-                                <img src="https://via.placeholder.com/150x150?text=Caneca" alt="Caneca de Rato" width="150">
+                                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Caneca de Rato" class="product-image">
                             </a>
                         </td>
                         <td><a href="produto-caneca.html">Caneca Temática de Ratos</a></td>
                         <td>Presentes</td>
-                        <td>R$ 24,90</td>
+                        <td class="price">R$ 24,90</td>
                         <td>Caneca de porcelana com desenhos de diferentes espécies</td>
                     </tr>
                 </tbody>
@@ -155,19 +413,30 @@
                 </tfoot>
             </table>
             
+            <!-- Vídeo demonstrativo -->
+            <div class="media-item">
+                <h4>Vídeo: Conheça nossos produtos em ação</h4>
+                <video controls class="video-demo" poster="https://images.unsplash.com/photo-1571781926265-40347da4e2f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400&q=80">
+                    <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p>Veja como nossos produtos melhoram a vida dos ratos domésticos.</p>
+            </div>
+            
             <!-- Filtros de categoria -->
             <section id="filtros">
                 <h3>Filtrar por Categoria</h3>
-                <ul>
-                    <li><a href="#habitação">Habitação</a></li>
-                    <li><a href="#alimentação">Alimentação</a></li>
-                    <li><a href="#enriquecimento">Enriquecimento</a></li>
-                    <li><a href="#educação">Educação</a></li>
-                    <li><a href="#conforto">Conforto</a></li>
-                    <li><a href="#transporte">Transporte</a></li>
-                    <li><a href="#vestuário">Vestuário</a></li>
-                    <li><a href="#presentes">Presentes</a></li>
-                </ul>
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="todos">Todos</button>
+                    <button class="category-btn" data-category="habitação">Habitação</button>
+                    <button class="category-btn" data-category="alimentação">Alimentação</button>
+                    <button class="category-btn" data-category="enriquecimento">Enriquecimento</button>
+                    <button class="category-btn" data-category="educação">Educação</button>
+                    <button class="category-btn" data-category="conforto">Conforto</button>
+                    <button class="category-btn" data-category="transporte">Transporte</button>
+                    <button class="category-btn" data-category="vestuário">Vestuário</button>
+                    <button class="category-btn" data-category="presentes">Presentes</button>
+                </div>
             </section>
             
             <!-- Informações de compra -->
@@ -182,15 +451,37 @@
                 </ol>
                 
                 <h4>Formas de Pagamento</h4>
-                <ul>
-                    <li>Cartão de crédito (até 3x sem juros)</li>
-                    <li>Cartão de débito</li>
-                    <li>Boleto bancário</li>
-                    <li>PIX (5% de desconto)</li>
-                </ul>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <h5>Cartão de Crédito</h5>
+                        <p>Até 3x sem juros</p>
+                    </div>
+                    <div class="payment-method">
+                        <h5>Cartão de Débito</h5>
+                        <p>Pagamento à vista</p>
+                    </div>
+                    <div class="payment-method">
+                        <h5>Boleto Bancário</h5>
+                        <p>Até 5% de desconto</p>
+                    </div>
+                    <div class="payment-method">
+                        <h5>PIX</h5>
+                        <p>5% de desconto</p>
+                    </div>
+                </div>
                 
                 <h4>Política de Entrega</h4>
                 <p>Entregamos para todo o Brasil. O prazo de entrega varia de 5 a 15 dias úteis, dependendo da localidade.</p>
+                
+                <!-- Áudio com informações de entrega -->
+                <div class="media-item">
+                    <h4>Ouça nossas informações de entrega</h4>
+                    <audio controls class="audio-sample">
+                        <source src="https://www.soundjay.com/button/button-4.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                    <p>Saiba mais sobre prazos e condições de entrega.</p>
+                </div>
             </section>
         </section>
     </main>
@@ -201,10 +492,31 @@
         <p><a href="sobre.html">Sobre nós</a> | <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a></p>
         <p><a href="#topo">Voltar ao topo</a></p>
     </footer>
-    <ul>
-    <li>
-        <a href="index.html">Voltar para o index</a>
-    </li>
-</ul>
+
+    <script>
+        // Filtros de categoria
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Here you would normally filter the products
+                    // For this example, we'll just show an alert
+                    const category = this.getAttribute('data-category');
+                    if (category !== 'todos') {
+                        alert(`Filtrando produtos da categoria: ${category}`);
+                    } else {
+                        alert('Mostrando todos os produtos');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
