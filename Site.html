@@ -3,46 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - Mundo dos Ratos</title>
+    <title>Ratolandia - O Mundo Colorido dos Ratos</title>
     <style>
+        /* Reset e configurações gerais */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: #333;
-            background-color: #f9f9f9;
+            line-height: 1.6;
         }
         
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Cabeçalho */
         header {
-            background: linear-gradient(to right, #2c3e50, #4a6491);
+            background: linear-gradient(90deg, #FF416C, #FF4B2B);
             color: white;
-            padding: 2rem 1rem;
+            padding: 30px 0;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 8px solid #FFD700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0 #FFD700;
+            letter-spacing: 2px;
         }
         
         header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 0 #000;
         }
         
+        /* Navegação */
         nav {
-            background-color: #34495e;
-            padding: 1rem;
+            background: linear-gradient(90deg, #00C9FF, #92FE9D);
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         nav ul {
@@ -53,345 +67,449 @@
         }
         
         nav li {
-            margin: 0 1rem;
+            margin: 0 15px;
         }
         
         nav a {
-            color: white;
+            color: #1a1a1a;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            background-color: rgba(255,255,255,0.7);
         }
         
         nav a:hover {
-            background-color: #1a252f;
+            background-color: #FF416C;
+            color: white;
+            transform: translateY(-3px);
         }
         
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        
+        /* Seções */
         section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 60px 0;
+            margin: 30px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #ecf0f1;
+        .color-1 {
+            background: linear-gradient(135deg, #FFE000, #799F0C);
         }
         
-        h3 {
-            color: #34495e;
-            margin: 1.5rem 0 1rem;
+        .color-2 {
+            background: linear-gradient(135deg, #FF6B6B, #FFE66D);
         }
         
-        h4 {
-            color: #4a6491;
-            margin: 1.2rem 0 0.5rem;
+        .color-3 {
+            background: linear-gradient(135deg, #00F5A0, #00D9F5);
         }
         
-        p {
-            margin-bottom: 1rem;
+        .color-4 {
+            background: linear-gradient(135deg, #FD746C, #FF9068);
         }
         
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .color-5 {
+            background: linear-gradient(135deg, #A8FF78, #78FFD6);
         }
         
-        .media-container {
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+        }
+        
+        /* Cards */
+        .card-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
+            justify-content: center;
+            gap: 30px;
         }
         
-        .media-item {
-            flex: 1 1 300px;
-            background-color: #f8f9fa;
-            padding: 1.2rem;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .media-item h4 {
-            margin-top: 0;
-            color: #2c3e50;
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
-        audio, video {
+        .card-img {
+            height: 200px;
+            background-color: #FFD700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card h3 {
+            color: #FF416C;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* Galeria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-1 { background: linear-gradient(135deg, #FF0080, #FF8C00); }
+        .gallery-2 { background: linear-gradient(135deg, #00C9FF, #92FE9D); }
+        .gallery-3 { background: linear-gradient(135deg, #FF416C, #FF4B2B); }
+        .gallery-4 { background: linear-gradient(135deg, #F000FF, #00FFE0); }
+        .gallery-5 { background: linear-gradient(135deg, #FFE000, #799F0C); }
+        .gallery-6 { background: linear-gradient(135deg, #00F5A0, #00D9F5); }
+        
+        /* Formulário */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #FF416C;
+        }
+        
+        input, textarea, select {
             width: 100%;
-            margin: 0.8rem 0;
-            border-radius: 4px;
+            padding: 12px;
+            border: 2px solid #00C9FF;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
         }
         
-        ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
+        input:focus, textarea:focus, select:focus {
+            border-color: #FF416C;
+            outline: none;
         }
         
-        li {
-            margin-bottom: 0.5rem;
+        button {
+            background: linear-gradient(90deg, #FF416C, #FF4B2B);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
         }
         
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,65,108,0.4);
+        }
+        
+        /* Rodapé */
         footer {
-            background-color: #2c3e50;
+            background: linear-gradient(90deg, #1a1a1a, #333);
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
+            padding: 30px 0;
+            margin-top: 50px;
         }
         
         footer p {
-            margin-bottom: 0.8rem;
+            margin: 10px 0;
         }
         
-        footer a {
-            color: #ecf0f1;
-            text-decoration: none;
-            margin: 0 0.5rem;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
         }
         
-        footer a:hover {
-            text-decoration: underline;
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
         }
         
-        .team-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+        .social-links a:hover {
+            color: #00C9FF;
         }
         
-        .team-member {
-            background-color: #f8f9fa;
-            padding: 1.2rem;
-            border-radius: 6px;
-            text-align: center;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        /* Animações */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
         
-        .team-member img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
+        .floating {
+            animation: float 5s ease-in-out infinite;
         }
         
+        /* Responsividade */
         @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
             nav ul {
                 flex-direction: column;
                 align-items: center;
             }
             
             nav li {
-                margin: 0.3rem 0;
+                margin: 5px 0;
             }
             
-            .media-container {
-                flex-direction: column;
-            }
-            
-            .team-container {
-                grid-template-columns: 1fr;
+            .card {
+                width: 100%;
+                max-width: 350px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Cabeçalho do site -->
+    <!-- Cabeçalho -->
     <header>
-        <h1>Mundo dos Ratos</h1>
-        <p>Descubra tudo sobre esses fascinantes roedores</p>
+        <div class="container">
+            <h1>🐭 Ratolandia 🐭</h1>
+            <p>Descubra o mundo vibrante e colorido desses incríveis roedores!</p>
+        </div>
     </header>
 
-    <!-- Menu de navegação -->
+    <!-- Navegação -->
     <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="especies.html">Espécies</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#especies">Espécies</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <section id="sobre">
-            <h2>Sobre o Mundo dos Ratos</h2>
-            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=400&q=80" alt="Rato em ambiente natural">
-            
-            <article>
-                <h3>Nossa História</h3>
-                <p>O site Mundo dos Ratos foi criado em 2023 com o objetivo de desmistificar e educar sobre esses fascinantes roedores. Percebemos que existe muito preconceito e desinformação sobre os ratos, e nosso propósito é mudar essa percepção através de conteúdo científico e educativo.</p>
-                <p>Nossa equipe é formada por biólogos, veterinários e entusiastas da natureza que dedicam seu tempo para pesquisar e compartilhar informações precisas sobre a vida, comportamento e importância ecológica dos ratos.</p>
-                
-                <div class="media-container">
-                    <div class="media-item">
-                        <h4>Comunicação entre ratos</h4>
-                        <audio controls>
-                            <source src="https://www.soundjay.com/button/button-3.mp3" type="audio/mpeg">
-                            Seu navegador não suporta o elemento de áudio.
-                        </audio>
-                        <p>Os ratos emitem sons ultrassônicos para comunicação que são inaudíveis para humanos.</p>
-                    </div>
-                    <div class="media-item">
-                        <h4>Rato em seu habitat natural</h4>
-                        <img src="https://images.unsplash.com/photo-1548685913-4b2c4b1dff99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato em seu habitat natural">
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Seção Início -->
+        <section id="inicio" class="color-1">
+            <h2>Bem-vindo ao Mundo dos Ratos!</h2>
+            <div class="card-container">
+                <div class="card floating">
+                    <div class="card-img">🐁</div>
+                    <div class="card-content">
+                        <h3>Ratos Domésticos</h3>
+                        <p>Conheça os ratinhos que conquistaram os lares como animais de estimação cheios de personalidade!</p>
                     </div>
                 </div>
-            </article>
+                <div class="card floating" style="animation-delay: 0.5s;">
+                    <div class="card-img">🐀</div>
+                    <div class="card-content">
+                        <h3>Ratos Selvagens</h3>
+                        <p>Explore a vida dos ratos em seus habitats naturais e sua incrível capacidade de adaptação.</p>
+                    </div>
+                </div>
+                <div class="card floating" style="animation-delay: 1s;">
+                    <div class="card-img">🔬</div>
+                    <div class="card-content">
+                        <h3>Ratos na Ciência</h3>
+                        <p>Descubra como esses pequenos heróis contribuem para avanços médicos e científicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <article>
-                <h3>Nossa Missão</h3>
-                <p>Nossa missão é promover o conhecimento científico sobre os ratos, combatendo estereótipos negativos e destacando a importância desses animais nos ecossistemas e na pesquisa científica.</p>
-                <p>Buscamos ser a principal fonte de informação confiável sobre ratos em língua portuguesa, oferecendo conteúdo acessível para estudantes, pesquisadores e o público em geral interessado em aprender mais sobre esses incríveis mamíferos.</p>
-                <p>Acreditamos que o conhecimento é a chave para a conservação e o respeito por todas as formas de vida, independentemente de sua popularidade ou aparência.</p>
-                
-                <div class="media-container">
-                    <div class="media-item">
-                        <h4>Rato de laboratório</h4>
-                        <img src="https://images.unsplash.com/photo-1584555130003-bb313e8e6c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato de laboratório">
-                        <p>Ratos são fundamentais para pesquisas médicas e científicas.</p>
-                    </div>
-                    <div class="media-item">
-                        <h4>Som de rato se alimentando</h4>
-                        <audio controls>
-                            <source src="https://www.soundjay.com/button/button-4.mp3" type="audio/mpeg">
-                            Seu navegador não suporta o elemento de áudio.
-                        </audio>
-                        <p>Ratos são onívoros e têm uma dieta variada na natureza.</p>
+        <!-- Seção Espécies -->
+        <section id="especies" class="color-2">
+            <h2>Espécies Coloridas de Ratos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img" style="background: linear-gradient(135deg, #FF0080, #FF8C00);">🐭</div>
+                    <div class="card-content">
+                        <h3>Rato-Doméstico</h3>
+                        <p>Pequeno, ágil e curioso. Adapta-se facilmente a diversos ambientes.</p>
                     </div>
                 </div>
-            </article>
+                <div class="card">
+                    <div class="card-img" style="background: linear-gradient(135deg, #00C9FF, #92FE9D);">🐀</div>
+                    <div class="card-content">
+                        <h3>Ratazana</h3>
+                        <p>Maior e mais robusta. Excelente nadadora e escavadora.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background: linear-gradient(135deg, #FF416C, #FF4B2B);">🌟</div>
+                    <div class="card-content">
+                        <h3>Rato-Albino</h3>
+                        <p>Variedade comum em laboratórios, com pelagem branca e olhos vermelhos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <article>
-                <h3>Nossa Visão</h3>
-                <p>Visamos tornar-nos referência internacional em educação sobre roedores, expandindo nosso conteúdo para abranger todas as espécies de ratos e seus habitats em diferentes partes do mundo.</p>
-                <p>Pretendemos desenvolver parcerias com instituições de pesquisa e conservação para apoiar estudos científicos e programas de preservação de espécies de ratos ameaçadas de extinção.</p>
-                <p>Nosso objetivo futuro inclui a criação de um centro virtual de recursos educativos que possa ser utilizado por escolas e universidades em seus programas de ensino sobre biodiversidade e ecologia.</p>
-                
-                <div class="media-container">
-                    <div class="media-item">
-                        <h4>Rato-canguru ameaçado</h4>
-                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato-canguru, espécie ameaçada">
-                        <p>Muitas espécies de ratos estão ameaçadas de extinção.</p>
-                    </div>
-                    <div class="media-item">
-                        <h4>Vídeo educativo sobre ratos</h4>
-                        <video width="100%" controls poster="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80">
-                            <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
-                            Seu navegador não suporta o elemento de vídeo.
-                        </video>
-                        <p>Vídeo educativo sobre a importância dos ratos no ecossistema.</p>
+        <!-- Seção Curiosidades -->
+        <section id="curiosidades" class="color-3">
+            <h2>Curiosidades Incríveis</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>😴 Sono REM</h3>
+                        <p>Ratos experimentam sono REM, assim como os humanos, e podem até sonhar!</p>
                     </div>
                 </div>
-            </article>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🎵 Sensibilidade Musical</h3>
+                        <p>Estudos mostram que ratos podem balançar a cabeça no ritmo da música!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🤝 Socialização</h3>
+                        <p>Ratos são animais extremamente sociais e podem sofrer de solidão quando isolados.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🏃‍♂️ Atletas Natos</h3>
+                        <p>Um rato pode cair de 15 metros de altura e sair ileso, graças à sua leveza e agilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <article>
-                <h3>Nossos Valores</h3>
-                
-                <h4>Precisão Científica</h4>
-                <p>Comprometemo-nos a basear todo nosso conteúdo em pesquisas científicas sólidas e fontes confiáveis, garantindo que as informações compartilhadas sejam precisas e atualizadas.</p>
-                
-                <h4>Respeito pela Vida Animal</h4>
-                <p>Acreditamos no valor intrínseco de todas as espécies e promovemos o respeito e a compaixão pelos ratos e por todos os animais, independentemente de sua função ecológica ou utilidade para os humanos.</p>
-                
-                <h4>Educação Acessível</h4>
-                <p>Defendemos que o conhecimento deve ser livre e acessível a todos. Por isso, disponibilizamos nosso conteúdo gratuitamente e em linguagem clara para diferentes públicos.</p>
-                
-                <h4>Conservação Ambiental</h4>
-                <p>Reconhecemos a importância dos ratos nos ecossistemas e promovemos práticas de conservação que protejam não apenas essas espécies, mas todo o ambiente em que vivem.</p>
-                
-                <h4>Ética e Transparência</h4>
-                <p>Mantemos transparência sobre nossas fontes de informação e metodologias, assegurando que nosso trabalho seja realizado com integridade e ética.</p>
-                
-                <div class="media-container">
-                    <div class="media-item">
-                        <h4>Rato em pesquisa comportamental</h4>
-                        <img src="https://images.unsplash.com/photo-1584555130003-bb313e8e6c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Rato em pesquisa comportamental">
-                    </div>
-                    <div class="media-item">
-                        <h4>Som de rato explorando ambiente</h4>
-                        <audio controls>
-                            <source src="https://www.soundjay.com/button/button-5.mp3" type="audio/mpeg">
-                            Seu navegador não suporta o elemento de áudio.
-                        </audio>
-                        <p>Ratos são animais curiosos que exploram ativamente seus ambientes.</p>
-                    </div>
-                </div>
-            </article>
+        <!-- Seção Galeria -->
+        <section id="galeria" class="color-4">
+            <h2>Galeria Colorida</h2>
+            <div class="gallery">
+                <div class="gallery-item gallery-1">Rato Fofinho</div>
+                <div class="gallery-item gallery-2">Rato Curioso</div>
+                <div class="gallery-item gallery-3">Rato Brincalhão</div>
+                <div class="gallery-item gallery-4">Rato Dorminhoco</div>
+                <div class="gallery-item gallery-5">Rato Explorador</div>
+                <div class="gallery-item gallery-6">Rato Família</div>
+            </div>
+        </section>
 
-            <article>
-                <h3>Nossa Equipe</h3>
-                <p>Contamos com uma equipe multidisciplinar dedicada à pesquisa e divulgação científica sobre roedores:</p>
-                
-                <div class="team-container">
-                    <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Dr. Rodrigo Silva, biólogo">
-                        <h4>Dr. Rodrigo Silva - Biólogo</h4>
-                        <p>Especialista em ecologia de roedores com mais de 15 anos de experiência em pesquisa de campo. Doutor em Zoologia pela Universidade de São Paulo.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Dra. Mariana Costa, veterinária">
-                        <h4>Dra. Mariana Costa - Veterinária</h4>
-                        <p>Veterinária especializada em animais silvestres e exóticos, com foco em saúde e bem-estar de roedores. Mestre em Medicina Veterinária pela UFMG.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Prof. Carlos Mendes, educador ambiental">
-                        <h4>Prof. Carlos Mendes - Educador Ambiental</h4>
-                        <p>Responsável pela adaptação do conteúdo científico para linguagem acessível. Desenvolve materiais educativos para escolas e programas de educação ambiental.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Ana Lúcia Pereira, pesquisadora">
-                        <h4>Ana Lúcia Pereira - Pesquisadora</h4>
-                        <p>Bacharel em Ciências Biológicas com especialização em comportamento animal. Coordena nossas pesquisas sobre interações sociais em colônias de ratos.</p>
-                    </div>
+        <!-- Seção Contato -->
+        <section id="contato" class="color-5">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </article>
-
-            <article>
-                <h3>Nossas Conquistas</h3>
-                <p>Desde nossa fundação, já alcançamos importantes marcos:</p>
-                <ul>
-                    <li>Mais de 50 artigos publicados sobre diferentes espécies de ratos</li>
-                    <li>Parcerias com 3 universidades para projetos de pesquisa</li>
-                    <li>Desenvolvimento de material educativo utilizado em 20 escolas</li>
-                    <li>Participação em programas de conservação de espécies ameaçadas</li>
-                    <li>Reconhecimento como fonte confiável por instituições científicas</li>
-                </ul>
-                
-                <div class="media-container">
-                    <div class="media-item">
-                        <h4>Material educativo</h4>
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Material educativo sobre ratos">
-                    </div>
-                    <div class="media-item">
-                        <h4>Rato em exposição educacional</h4>
-                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Exposição educacional sobre ratos">
-                    </div>
+                <div class="form-group">
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-            </article>
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <select id="subject" name="subject">
+                        <option value="info">Quero mais informações</option>
+                        <option value="adoption">Interesse em adoção</option>
+                        <option value="partnership">Parceria</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Sua Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
         </section>
     </main>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2023 Mundo dos Ratos. Todos os direitos reservados.</p>
-        <p><a href="sobre.html">Sobre nós</a> | <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a></p>
-        <p><a href="#topo">Voltar ao topo</a></p>
+        <div class="container">
+            <div class="social-links">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">🐦</a>
+                <a href="#">📺</a>
+            </div>
+            <p>Ratolandia - O mundo colorido dos ratos</p>
+            <p>&copy; 2023 - Todos os direitos reservados</p>
+        </div>
     </footer>
+
+    <script>
+        // Efeito de confete ao clicar no botão
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Em breve entraremos em contato. 🐭');
+            this.reset();
+            
+            // Efeito visual simples de confete
+            const button = this.querySelector('button');
+            button.style.background = 'linear-gradient(90deg, #00C9FF, #92FE9D)';
+            setTimeout(() => {
+                button.style.background = 'linear-gradient(90deg, #FF416C, #FF4B2B)';
+            }, 1000);
+        });
+        
+        // Rolagem suave para as seções
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
